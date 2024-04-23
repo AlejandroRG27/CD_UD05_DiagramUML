@@ -1,6 +1,9 @@
+
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Veterinaria {
+    static Scanner sca = new Scanner(System.in);
     private ArrayList<Animal> listaAnimales;
     private ArrayList<Cliente> listaClientes;
 
@@ -11,21 +14,25 @@ public class Veterinaria {
 
     //TODO: Completar los siguientes métodos
     public void agregarCliente(Cliente cliente) {
-        // Agregar cliente a la lista de clientes
+        
+        listaClientes.add(cliente);
 
     }
 
     public void agregarAnimal(Animal animal) {
-        // Agregar animal a la lista de animales
+        listaAnimales.add(animal);
     }
 
     public void asignarConsulta(Animal animal, Consulta consulta) {
-        // Asignar consulta a un animal
 
+        asignarConsulta(animal, consulta);
     }
 
     //TODO: Crear un método para imprimir todas las consultas de todas las listas de animales. De las consultas imprimir el motivo, la fecha y el diagnostico. 
     public void imprimirConsultas(){
+        for (Animal animal : listaAnimales) {
+            System.out.println(animal);
+        }
     }
     
     //TODO: Generar getters y setters
